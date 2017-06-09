@@ -918,7 +918,9 @@ class JCSingleton {
 	 * @return bool
 	 */
 	public static function onuserCan(
-	}
+		/** @noinspection PhpUnusedParameterInspection */
+		&$title, &$user, $action, &$result = null
+	) {	}
 
 	/**
 	 * @param object $value

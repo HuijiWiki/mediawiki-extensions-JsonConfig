@@ -8,32 +8,6 @@
 	"descriptionmsg": "jsonconfig-desc",
 	"type": "other",
 	"license-name": "GPL-2.0+",
-	"namespaces": [
-		{
-			"id": 482,
-			"constant": "NS_CONFIG",
-			"name": "Config",
-			"conditional": true
-		},
-		{
-			"id": 483,
-			"constant": "NS_CONFIG_TALK",
-			"name": "Config_talk",
-			"conditional": true
-		},
-		{
-			"id": 486,
-			"constant": "NS_DATA",
-			"name": "Data",
-			"conditional": true
-		},
-		{
-			"id": 487,
-			"constant": "NS_DATA_TALK",
-			"name": "Data_talk",
-			"conditional": true
-		}
-	],
 	"MessagesDirs": {
 		"JsonConfig": [
 			"i18n"

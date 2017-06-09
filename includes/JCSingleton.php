@@ -589,17 +589,17 @@ class JCSingleton {
 		foreach ( self::$namespaces as $ns => $name ) {
 			if ( $name === false ) { // must be already declared
 				if ( !array_key_exists( $ns, $namespaces ) ) {
-					wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns " .
-					              "has not been declared by core or other extensions" );
-				}
+// 					wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns " .
+// 					              "has not been declared by core or other extensions" );
+// 				}
 			} elseif ( array_key_exists( $ns, $namespaces ) ) {
-				wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns => '$name' " .
-					"is already declared as '$namespaces[$ns]'" );
+// 				wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns => '$name' " .
+// 					"is already declared as '$namespaces[$ns]'" );
 			} else {
 				$key = array_search( $name, $namespaces );
 				if ( $key !== false ) {
-					wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns => '$name' " .
-						"has identical name with the namespace #$key" );
+// 					wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns => '$name' " .
+// 						"has identical name with the namespace #$key" );
 				} else {
 					$namespaces[$ns] = $name;
 				}

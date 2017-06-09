@@ -591,7 +591,7 @@ class JCSingleton {
 				if ( !array_key_exists( $ns, $namespaces ) ) {
 // 					wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns " .
 // 					              "has not been declared by core or other extensions" );
-// 				}
+				}
 			} elseif ( array_key_exists( $ns, $namespaces ) ) {
 // 				wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns => '$name' " .
 // 					"is already declared as '$namespaces[$ns]'" );

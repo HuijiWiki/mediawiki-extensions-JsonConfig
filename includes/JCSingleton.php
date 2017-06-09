@@ -918,20 +918,6 @@ class JCSingleton {
 	 * @return bool
 	 */
 	public static function onuserCan(
-		/** @noinspection PhpUnusedParameterInspection */
-		&$title, &$user, $action, &$result = null
-	) {
-		if ( !self::jsonConfigIsStorage() ) {
-			return true;
-		}
-
-		if ( $action === 'create' && self::parseTitle( $title ) === null ) {
-			// prohibit creation of the pages for the namespace that we handle,
-			// if the title is not matching declared rules
-			$result = false;
-			return false;
-		}
-		return true;
 	}
 
 	/**

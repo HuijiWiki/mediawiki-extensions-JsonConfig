@@ -127,8 +127,6 @@ class JCSingleton {
 				}
 			}
 			if ( array_key_exists( $modelId, $contentHandlers ) ) {
-				$warnFunc( "JsonConfig: Invalid \$wgJsonConfigs['$confId']: Model '$modelId' is " .
-					"already registered in \$contentHandlers to {$contentHandlers[$modelId]}" );
 				continue;
 			}
 			$conf->model = $modelId;

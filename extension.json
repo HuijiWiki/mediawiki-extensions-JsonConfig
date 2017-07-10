@@ -20,18 +20,6 @@
 			"constant": "NS_CONFIG_TALK",
 			"name": "Config_talk",
 			"conditional": true
-		},
-		{
-			"id": 486,
-			"constant": "NS_DATA",
-			"name": "Data",
-			"conditional": true
-		},
-		{
-			"id": 487,
-			"constant": "NS_DATA_TALK",
-			"name": "Data_talk",
-			"conditional": true
 		}
 	],
 	"MessagesDirs": {

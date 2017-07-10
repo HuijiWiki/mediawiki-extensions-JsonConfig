@@ -127,8 +127,6 @@ class JCSingleton {
 				}
 			}
 			if ( array_key_exists( $modelId, $contentHandlers ) ) {
-				$warnFunc( "JsonConfig: Invalid \$wgJsonConfigs['$confId']: Model '$modelId' is " .
-					"already registered in \$contentHandlers to {$contentHandlers[$modelId]}" );
 				continue;
 			}
 			$conf->model = $modelId;
@@ -585,17 +583,15 @@ class JCSingleton {
 		foreach ( self::$namespaces as $ns => $name ) {
 			if ( $name === false ) { // must be already declared
 				if ( !array_key_exists( $ns, $namespaces ) ) {
-					wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns " .
-						"has not been declared by core or other extensions" );
 				}
 			} elseif ( array_key_exists( $ns, $namespaces ) ) {
-				wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns => '$name' " .
-					"is already declared as '$namespaces[$ns]'" );
+// 				wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns => '$name' " .
+// 					"is already declared as '$namespaces[$ns]'" );
 			} else {
 				$key = array_search( $name, $namespaces );
 				if ( $key !== false ) {
-					wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns => '$name' " .
-						"has identical name with the namespace #$key" );
+// 					wfLogWarning( "JsonConfig: Invalid \$wgJsonConfigs: Namespace $ns => '$name' " .
+// 						"has identical name with the namespace #$key" );
 				} else {
 					$namespaces[$ns] = $name;
 				}
@@ -916,19 +912,7 @@ class JCSingleton {
 	public static function onuserCan(
 		/** @noinspection PhpUnusedParameterInspection */
 		&$title, &$user, $action, &$result = null
-	) {
-		if ( !self::jsonConfigIsStorage() ) {
-			return true;
-		}
-
-		if ( $action === 'create' && self::parseTitle( $title ) === null ) {
-			// prohibit creation of the pages for the namespace that we handle,
-			// if the title is not matching declared rules
-			$result = false;
-			return false;
-		}
-		return true;
-	}
+	) {	}
 
 	/**
 	 * @param object $value
